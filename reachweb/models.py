@@ -20,7 +20,7 @@ class Chv(models.Model):
     def get_all_chvs(cls):
         chvs = cls.objects.all()
         return chvs
-    #
+
     # @receiver(post_save, sender=User)
     # def create_chv(sender, instance, created, **kwargs):
     #     if created:
@@ -43,7 +43,8 @@ class Patient(models.Model):
         ('High Point', 'Sewage'), 
         ('K-road', 'Stage'),
         ('Gwa-Kairu', 'Estate'),
-        ('Ruiru', 'Kimbo')
+        ('Ruiru', 'Kimbo'),
+        ('Kasarani', 'Nairobi'),
     )
     name = models.CharField(max_length=255)
     examiner = models.ForeignKey('Chv', on_delete=models.CASCADE, related_name='chv')
@@ -76,7 +77,7 @@ class Emergencies(models.Model):
         ('Sickness', 'Sick people emergencies'),
     )
     type = models.CharField(max_length=200, choices=Emergency_TYPES, default='Sickness')
-    location = models.ForeignKey('Emergencies', on_delete=models.CASCADE, related_name='locale')
+    location = models.ForeignKey('Location', on_delete=models.CASCADE, related_name='locale')
     reported_by = models.ForeignKey('Chv', on_delete=models.CASCADE, related_name='reporter')
 
     class Meta:
@@ -102,6 +103,9 @@ class Location(models.Model):
     class Meta:
         db_table = 'location'
         ordering = ['-name']
+
+    def __str__(self):
+        return f'{self.name}'
 
     @classmethod
     def get_all_locations(cls):
