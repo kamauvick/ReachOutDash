@@ -31,6 +31,7 @@ SECRET_KEY = config('SECRET_KEY')
 # Application definition
 
 INSTALLED_APPS = [
+    'dashboard',
     'reachweb',
     'django.contrib.admin',
     'django.contrib.auth',
