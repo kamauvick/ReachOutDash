@@ -15,7 +15,6 @@ import os
 import dj_database_url
 from decouple import config, Csv
 
-SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -25,15 +24,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'j%+j)(1$fuma0lh-m@syksg^2le6joni17bssk!4=yj*_s3zxr'
-
+SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'dashboard',
     'reachweb',
     'django.contrib.admin',
     'django.contrib.auth',
