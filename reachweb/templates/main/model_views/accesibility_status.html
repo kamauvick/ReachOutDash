@@ -1,0 +1,14 @@
+{% extends 'layout/web_base.html'%}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="d-block mx-auto mt-5">
+    <h3 class="text-center">Road accesibility status</h3>
+    <div class="mr-4 ml-4">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form|crispy}}
+            <button class="d-block mx-auto btn btn-success">Add Info</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

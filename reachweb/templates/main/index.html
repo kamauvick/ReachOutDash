@@ -1,10 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'layout/web_base.html' %}
+
+{% block content%}
+<div class="container-fluid">
+    <div class="overlaly">
+        <h2 class="text-center">Reach Out</h2>
+        <div class="card-group">
+            <div class="col-sm-12">
+                <div class="card col-sm-3" style="margin:0;padding:0;">
+                    <div class="card-header"> <h3 class="text-center"><a href="{% url 'new_patient'%}">Data collection tool</a></h3> </div>
+                    <div class="card-body" style="margin:0; padding:0">
+                        <img src="" class="card-img" alt="">
+                    </div>
+                </div>
+                <div class="card col-sm-3" style="margin:0;padding:0;">
+                    <div class="card-header"> <h3 class="text-center"><a href="{% url 'index'%}">Patient List</a></h3> </div>
+                    <div class="card-body" style="margin:0; padding:0">
+                        <img src="" class="card-img" alt="">
+                    </div>
+                </div>
+                <div class="card col-sm-3" style="margin:0;padding:0;">
+                    <div class="card-header"> <h3 class="text-center"><a href="{% url 'new_emergency'%}">Emergencies</a></h3> </div>
+                    <div class="card-body" style="margin:0; padding:0">
+                        <img src="" class="card-img" alt="">
+                    </div>
+                </div>
+                <div class="card col-sm-3" style="margin:0;padding:0;">
+                    <div class="card-header"> <h3 class="text-center"><a href="{% url 'access_status'%}">Location Access Survey</a></h3> </div>
+                    <div class="card-body" style="margin:0; padding:0">
+                        <img src="" class="card-img" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

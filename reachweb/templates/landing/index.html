@@ -1,0 +1,25 @@
+{% extends 'layout/landing_base.html' %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="page-header clear-filer" filter-color="purple">
+        <div class="page-header-image" data-parallax="true">
+            <div class="filter">
+                <br><br><br><br><br><br>
+                <div class="text-center t-box pt-5">
+                    <h1 class="r-text">Reach Out WebApp</h1>
+                    <h4 class="description text-center mt-5 text-white">Reaching out to the community</h4>
+                    <br/>
+                    <div class="d-block mx-auto" style="display:flex;">
+                        <a href="{% url 'login' %}"
+                           class="btn  btn-login text-white mr-2 waves-effect waves-light">Sign in</a>
+                        <a href="{% url 'signup' %}"
+                           class="btn btn-signup text-white ml-2 waves-effect waves-light">Sign UP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

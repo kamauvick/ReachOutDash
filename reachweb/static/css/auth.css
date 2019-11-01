@@ -1,0 +1,32 @@
+.in-text{
+font-weight:bold;
+font-size:20px;
+}
+
+.up-text{
+font-weight:bold;
+font-size:20px;
+}
+
+.form-text {
+display:none;
+}
+
+@media (max-width: 740px) {
+.card{
+width:200px;
+height:300px;
+}
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+width:200px;
+height:300px;
+}
+}
+
+@media (max-width: 991px) {
+width:200px;
+height:300px;
+}
+}
