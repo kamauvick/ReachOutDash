@@ -1,0 +1,17 @@
+{% extends 'layout/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1 class="ml-3">CHV's</h1>
+<div class="col-sm-12">
+    {% for chv in chvs %}
+    <div class="col-sm-6 col-md-3" style="height:200px;">
+        <div class="card text-white bg-info mb-3" style="max-width:18rem;">
+            <div class="card-header">{{chv.age}}</div>
+            <div class="card-body">
+                <img src="{{chv.profilePicture.url}}" class="card-img" alt="{{chv.phonenumber}}">
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

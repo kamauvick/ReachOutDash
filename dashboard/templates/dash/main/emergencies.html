@@ -1,0 +1,17 @@
+{% extends 'layout/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1 class="ml-3">Emergencies</h1>
+<div class="col-sm-12">
+    {% for emergency in emergencies %}
+    <div class="col-sm-6 col-md-3">
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+            <div class="card-header"><h4 class="">{{emergency.type}}</h4></div>
+            <div class="card-body">
+                <h5 class="ml-2">{{emergency.reportedBy.chv.name}}</h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

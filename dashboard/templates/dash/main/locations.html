@@ -1,0 +1,20 @@
+{% extends 'layout/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1 class="ml-3">Locations</h1>
+<div class="col-sm-12">
+    {% for location in locations %}
+    <div class="col-sm-6 col-md-3">
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+            <div class="card-header"><h4 class="">{{location.name}}</h4></div>
+            <div class="card-body">
+                <h5 class="ml-2">{{location.county}}</h5>
+            </div>
+            <div>
+                <div class=" card-text ml-3 mt-2">{{location.accessibility}}</div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
